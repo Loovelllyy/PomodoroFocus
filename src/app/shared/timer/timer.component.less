@@ -1,0 +1,118 @@
+.wrapper {
+  position: relative;
+}
+
+.time {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: max-content;
+  z-index: 2;
+  width: max-content;
+  margin: auto;
+  font-size: 75pt;
+  transition: all .2s ease-in;
+}
+
+.arrow-container {
+  display: grid;
+  grid-template-areas:
+        "up1 up2 . up3 up4"
+        ". . . . ."
+        "dw5 dw6 . dw7 dw8";
+  position: absolute;
+  top: 0;
+  left: -50px;
+  bottom: 30px;
+  right: 0;
+  margin: auto;
+  height: 130px;
+  width: 320px;
+  z-index: 2;
+  justify-content: space-around;
+  align-content: space-between;
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+  font-size: 40px;
+  // перебиваю стили библиотеки
+  line-height: 40px !important;
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: max-content;
+  width: max-content;
+  &:nth-child(1) {
+    grid-area: up1;
+  }
+  &:nth-child(1) {
+    grid-area: up1;
+  }
+  &:nth-child(2) {
+    grid-area: up2;
+  }
+  &:nth-child(3) {
+    grid-area: up3;
+  }
+  &:nth-child(4) {
+    grid-area: up4;
+  }
+  &:nth-child(5) {
+    grid-area: dw5;
+  }
+  &:nth-child(6) {
+    grid-area: dw6;
+  }
+  &:nth-child(7) {
+    grid-area: dw7;
+  }
+  &:nth-child(8) {
+    grid-area: dw8;
+  }
+
+  &_button {
+    min-width: 50px;
+    padding: 0;
+    height: 40px;
+  }
+}
+
+.button {
+  border-radius: 16px;
+  padding: 10px 40px;
+}
+
+.circle-button {
+  background: rgba(29, 85, 29, 0.58);
+}
+
+._2 {
+  background: rgba(255, 0, 0, 0.5);
+}
+
+._3 {
+  background: #f6ff0052;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+
+  &:last-of-type {
+    margin-top: 56px;
+    justify-content: space-evenly;
+
+  }
+}

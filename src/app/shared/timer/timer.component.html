@@ -1,0 +1,63 @@
+<app-progress-bar [value]="bufferValue"></app-progress-bar>
+<div class="wrapper">
+  <app-wave-bg></app-wave-bg>
+  <div class="time">{{viewTime}}</div>
+  <div class="arrow-container" *ngIf="!isStart">
+    <div class="arrow arrow_button">
+      <button (click)="setCustomTime('tenMin', true)" mat-icon-button color="primary" class="arrow_button">
+        <mat-icon class="icon">keyboard_arrow_up</mat-icon>
+      </button>
+    </div>
+    <div class="arrow">
+      <button (click)="setCustomTime('min', true)" mat-icon-button color="primary" class="arrow_button">
+        <mat-icon class="icon">keyboard_arrow_up</mat-icon>
+      </button>
+    </div>
+    <div class="arrow">
+      <button (click)="setCustomTime('tenSec', true)" mat-icon-button color="primary" class="arrow_button">
+        <mat-icon class="icon">keyboard_arrow_up</mat-icon>
+      </button>
+    </div>
+    <div class="arrow">
+      <button (click)="setCustomTime('sec', true)" mat-icon-button color="primary" class="arrow_button">
+        <mat-icon class="icon">keyboard_arrow_up</mat-icon>
+      </button>
+    </div>
+    <div class="arrow">
+      <button (click)="setCustomTime('tenMin', false)" mat-icon-button color="primary" class="arrow_button">
+        <mat-icon class="icon">keyboard_arrow_down</mat-icon>
+      </button>
+    </div>
+    <div class="arrow">
+      <button (click)="setCustomTime('min', false)" mat-icon-button color="primary" class="arrow_button">
+        <mat-icon class="icon">keyboard_arrow_down</mat-icon>
+      </button>
+    </div>
+    <div class="arrow">
+      <button (click)="setCustomTime('tenSec', false)" mat-icon-button color="primary" class="arrow_button">
+        <mat-icon class="icon">keyboard_arrow_down</mat-icon>
+      </button>
+    </div>
+    <div class="arrow">
+      <button (click)="setCustomTime('sec', false)" mat-icon-button color="primary" class="arrow_button">
+        <mat-icon class="icon">keyboard_arrow_down</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <button mat-fab color="primary" class="circle-button" (click)="startTimer()">
+    <mat-icon>play_arrow</mat-icon>
+  </button>
+  <button mat-fab color="warn" class="circle-button _2" (click)="endTimer()">
+    <mat-icon>stop</mat-icon>
+  </button>
+  <button mat-fab color="warn" class="circle-button _3" (click)="resetTimer()">
+    <mat-icon>restart_alt</mat-icon>
+  </button>
+</div>
+<div class="container">
+  <button mat-raised-button color="primary" class="button" (click)="setTime(25)">Pomodoro</button>
+  <button mat-raised-button color="primary" class="button" (click)="setTime(5)">Short break</button>
+  <button mat-raised-button color="primary" class="button" (click)="setTime(15)">Long break</button>
+</div>

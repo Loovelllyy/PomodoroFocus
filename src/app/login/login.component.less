@@ -1,0 +1,33 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #9873d9;
+  z-index: 0;
+}
+.circle {
+  position: absolute;
+  width: 60vh;
+  height: 60vh;
+  border-radius: 50%;
+  background: #7b1fa22e;
+  z-index: 1;
+  animation: 20s infinite pulse;
+}
+
+.form {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
