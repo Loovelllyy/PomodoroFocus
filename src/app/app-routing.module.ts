@@ -8,6 +8,15 @@ import {PomodoroComponent} from "./pages/pomodoro/pomodoro.component";
 
 const routes: Routes = [
   {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: '',
+    redirectTo: '/login',
+    pathMatch: 'full'
+  },
+  {
     path: '',
     component: AppComponent,
     children: [
@@ -25,17 +34,6 @@ const routes: Routes = [
       },
     ]
   },
-  {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
-    path: '',
-    redirectTo: '/login',
-    pathMatch: 'full'
-  },
-
-
 ];
 
 @NgModule({

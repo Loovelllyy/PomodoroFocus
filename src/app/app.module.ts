@@ -19,11 +19,10 @@ import {MatListModule} from "@angular/material/list";
 import { TodoComponent } from './pages/todo/todo.component';
 import {MatCardModule} from "@angular/material/card";
 import { TodoCardComponent } from './shared/todo-card/todo-card.component';
-import { LoginComponent } from './login/login.component';
 import { PomodoroComponent } from './pages/pomodoro/pomodoro.component';
-import { FormComponent } from './login/components/form/form.component';
 import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
+import {LoginModule} from "./login/login.module";
 
 @NgModule({
   declarations: [
@@ -36,9 +35,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     MenuListComponent,
     TodoComponent,
     TodoCardComponent,
-    LoginComponent,
     PomodoroComponent,
-    FormComponent
   ],
   imports: [
     BrowserModule,
@@ -52,9 +49,11 @@ import {ReactiveFormsModule} from "@angular/forms";
     MatListModule,
     MatCardModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LoginModule
   ],
   providers: [],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

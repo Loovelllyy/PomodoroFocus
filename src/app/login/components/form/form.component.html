@@ -16,13 +16,15 @@
   <form class="example-form">
     <mat-form-field class="example-full-width">
       <mat-label>Password</mat-label>
-      <input type="password" matInput [formControl]="passwordFormControl" placeholder="Ex. pat@example.com">
-      <mat-error *ngIf="passwordFormControl.hasError('pattern') && !passwordFormControl.hasError('required')">
-        Your password have has at least one uppercase letter and one number
-      </mat-error>
+      <input type="password" matInput [formControl]="passwordFormControl">
+<!--      <mat-error *ngIf="!passwordFormControl.hasError('pattern') && !passwordFormControl.hasError('required')">-->
+<!--        Your password have has at least one uppercase letter and one number-->
+<!--      </mat-error>-->
       <mat-error *ngIf="passwordFormControl.hasError('required')">
         Password is <strong>required</strong>
       </mat-error>
     </mat-form-field>
+
   </form>
+  <button [disabled]="false" mat-raised-button color="primary" (click)="signIn()">Sing in</button>
 </div>
