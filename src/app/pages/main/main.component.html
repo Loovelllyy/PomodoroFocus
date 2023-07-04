@@ -10,4 +10,18 @@
 <!--  </div>-->
 <!--&lt;!&ndash;  <div class="main_section">todos</div>&ndash;&gt;-->
 <!--</section>-->
-<p>main</p>
+<!--<p>main</p>-->
+<div class="container">
+  <p class="header">Welcome to my app</p>
+  <div class="cards">
+    <mat-card [routerLink]="'/pomodoro'">
+      <mat-card-title>Pomodoro</mat-card-title>
+      <mat-icon class="icon">alarm_on</mat-icon>
+    </mat-card>
+    <mat-card [routerLink]="'/todo'">
+      <mat-card-title>Todo</mat-card-title>
+      <mat-icon class="icon">done_all</mat-icon>
+    </mat-card>
+  </div>
+
+</div>
