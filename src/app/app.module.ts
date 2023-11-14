@@ -23,6 +23,7 @@ import { PomodoroComponent } from './pages/pomodoro/pomodoro.component';
 import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
 import {LoginModule} from "./login/login.module";
+import { RFormComponent } from './pages/r-form/r-form.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import {LoginModule} from "./login/login.module";
     TodoComponent,
     TodoCardComponent,
     PomodoroComponent,
+    RFormComponent,
   ],
   imports: [
     BrowserModule,

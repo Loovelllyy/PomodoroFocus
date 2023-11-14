@@ -6,6 +6,7 @@ import {TodoComponent} from "./pages/todo/todo.component";
 import {LoginComponent} from "./login/login.component";
 import {PomodoroComponent} from "./pages/pomodoro/pomodoro.component";
 import { AuthGuard } from "./shared/guards/auth-guard";
+import {RFormComponent} from "./pages/r-form/r-form.component";
 
 const routes: Routes = [
   {
@@ -33,6 +34,10 @@ const routes: Routes = [
       {
         path: 'todo',
         component: TodoComponent,
+      },
+      {
+        path: 'r-form',
+        component: RFormComponent,
       },
     ]
   },

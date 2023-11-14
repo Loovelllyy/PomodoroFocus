@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { DefinePlugin } = require("webpack");
+const { DefinePlugin, container: { ModuleFederationPlugin } } = require("webpack");
 
 const env = {
   'FAREBASE_API_KEY': process.env.FAREBASE_API_KEY,
@@ -15,6 +15,11 @@ module.exports = {
   plugins: [
     new DefinePlugin({
       'process.env': JSON.stringify(env)
-    })
+    }),
+    new ModuleFederationPlugin({
+      remotes: {
+        RRForms: 'RRforms@http://localhost:3000/export-RRforms.js'
+      }
+    }),
   ]
 }
